@@ -34,7 +34,7 @@ Please see screenshots attached
 ## Deployed Links
 The following persons assisted with this project.  If left blank, there were no other contributors.
 - Github Repository Link:     https://github.com/DeeScrump/BlogginBoutTech.git
-- Heroku Deployed Link:       
+- Heroku Deployed Link:       https://blogginbouttech.herokuapp.com/
 
 ## License
 © <2021> Dwight C Kornbluth II

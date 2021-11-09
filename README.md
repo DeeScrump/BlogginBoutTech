@@ -30,6 +30,8 @@ Please see screenshots attached
 
 ![login page](./public/images/blogginglogin.png)
 
+![screencastify of heroku deployed site](./public/images/blogginbouttech.gif)
+
     
 ## Deployed Links
 The following persons assisted with this project.  If left blank, there were no other contributors.

@@ -1,3 +1,4 @@
+// Form handler for log in credentials
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -19,6 +20,7 @@ const loginFormHandler = async (event) => {
   }
 };
   
+// Form handler for signup credentials
 const signupFormHandler = async (event) => {
   event.preventDefault();
 

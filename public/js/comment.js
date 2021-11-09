@@ -1,3 +1,4 @@
+// Handles inputs to add a comment under a user's post
 const commentFormHandler = async function(event) {
     event.preventDefault();
 

@@ -1,3 +1,4 @@
+// Handler to execute logging out of site
 const logout = async () => {
   const response = await fetch('/api/user/logout', {
     method: 'POST',

@@ -1,3 +1,4 @@
+// Handles input inforamtion to create a new posting to user dashboard
 const newFormHandler = async function(event) {
     event.preventDefault();
 

@@ -1,5 +1,6 @@
 const postId = document.querySelector('input[name="post-id"]').value;
 
+// Handles new information to update existing post
 const editFormHandler = async function (event) {
     event.preventDefault();
 
@@ -20,6 +21,7 @@ const editFormHandler = async function (event) {
     document.location.replace('/dashboard');
 };
 
+// Deletes selected post
 const deleteClickHandler = async function() {
     await fetch(`/api/post/${postId}`, {
         method: 'DELETE'

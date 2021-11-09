@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models/');
 
-// get all posts for homepage
+// Get all posts for homepage to display at startup
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// get single post
+// Get a single post based on matching id for click event
 router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -41,6 +41,7 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
+// Check to make sure user has an active login, if not send to login page
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -48,15 +49,6 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
-});
-
-router.get('/signup', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('signup');
 });
 
 module.exports = router;

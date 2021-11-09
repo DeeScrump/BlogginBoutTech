@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// Checking for new user and creating in db based in valid inputs
 router.post('/', async (req, res) => {
   try {
     const newUser = await User.create({
@@ -20,6 +21,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Existing user credentials entered matches user in db
 router.post('/login', async (req, res) => {
   try {
     const user = await User.findOne({
@@ -52,6 +54,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// Logs user out of active session
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {

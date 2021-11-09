@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Post } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
+// Route for creating a new post based on user inputs
 router.post('/', withAuth, async (req, res) => {
   const body = req.body;
 
@@ -13,6 +14,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+// Routes to update existing post, once located via postId
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const [affectedRows] = await Post.update(req.body, {
@@ -31,6 +33,7 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 });
 
+// Route to delete existing post found by postID
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const [affectedRows] = Post.destroy({
